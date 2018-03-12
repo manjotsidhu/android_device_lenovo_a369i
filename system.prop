@@ -1,7 +1,5 @@
 #
-# system.prop for Micromax Unite 2 A106
-# By GODz Android Dev
-# Manjot Sidhu - Arbaz Khan - Piyush Kulkarni
+# system.prop for Lenovo A369i
 #
 				  
 
@@ -11,7 +9,6 @@ rild.libargs=-d /dev/ttyC0
 
 # MTK, Infinity, 20090720 {
 wifi.interface=wlan0
-ro.hardware=sprout
 # MTK, Infinity, 20090720 }
 
 # MTK, mtk03034, 20101210 {
@@ -66,7 +63,7 @@ debug.hwui.render_dirty_regions=false
 
 ro.mediatek.chip_ver=S01
 ro.mediatek.version.release=ALPS.W10.24.p0
-ro.mediatek.platform=MT6582
+ro.mediatek.platform=mt6572
 ro.mediatek.version.sdk=1
 ro.crypto.state=unencrypted
 ro.telephony.sim.count=2
@@ -87,7 +84,7 @@ ro.telephony.ril_class=MediaTekRIL
 ro.telephony.ril.config=fakeiccid
 bgw.current3gband=0
 ril.external.md=0
-ro.sf.hwrotation=180
+ro.sf.hwrotation=0
 ril.current.share_modem=2
 ril.radiooff.poweroffMD=0
 media.stagefright.legacyencoder=true

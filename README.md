@@ -5,7 +5,7 @@ THANKS @DeVviL FOR THE TREE
 
 Basic   | Spec Sheet
 -------:|:-------------------------
-CPU     | 1.3GHz Quad-Core MT6582
+CPU     | 1.3GHz Quad-Core mt6572
 GPU     | Mali-400MP
 Memory  | 1GB RAM
 Shipped Android Version | 4.4.2

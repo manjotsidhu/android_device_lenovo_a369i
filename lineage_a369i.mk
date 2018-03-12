@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-LOCAL_PATH := device/micromax/a106
+LOCAL_PATH := device/lenovo/a369i/
 
 # GPS
 PRODUCT_COPY_FILES += \
@@ -74,16 +74,15 @@ PRODUCT_COPY_FILES += \
 PRODUCT_TAGS += dalvik.gc.type-precise
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/root/init.sprout_common.rc:root/init.sprout_common.rc \
     $(LOCAL_PATH)/rootdir/root/sbin/multi_init:root/sbin/multi_init \
     $(LOCAL_PATH)/rootdir/root/init.protect.rc:root/init.protect.rc \
-    $(LOCAL_PATH)/rootdir/root/init.sprout.rc:root/init.sprout.rc \
+    $(LOCAL_PATH)/rootdir/root/init.mt6572.rc:root/init.mt6572.rc \
     $(LOCAL_PATH)/rootdir/root/init.modem.rc:root/init.modem.rc \
     $(LOCAL_PATH)/rootdir/root/factory_init.rc:root/factory_init.rc \
-    $(LOCAL_PATH)/rootdir/root/ueventd.sprout.rc:root/ueventd.sprout.rc \
-    $(LOCAL_PATH)/rootdir/root/init.sprout.usb.rc:root/init.sprout.usb.rc \
+    $(LOCAL_PATH)/rootdir/root/ueventd.mt6572.rc:root/ueventd.mt6572.rc \
+    $(LOCAL_PATH)/rootdir/root/init.mt6572.usb.rc:root/init.mt6572.usb.rc \
     $(LOCAL_PATH)/rootdir/root/init.zeta0y_core.rc:root/init.zeta0y_core.rc \
-    $(LOCAL_PATH)/rootdir/root/fstab.sprout:root/fstab.sprout
+    $(LOCAL_PATH)/rootdir/root/fstab.mt6572:root/fstab.mt6572
 	
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/root/twrp.fstab:recovery/root/etc/twrp.fstab
@@ -115,7 +114,7 @@ PRODUCT_PACKAGES += \
 
 # GPS
 PRODUCT_PACKAGES += \
-    gps.mt6582\
+    gps.mt6572\
     YGPS
 
 # Wifi
@@ -127,7 +126,7 @@ PRODUCT_PACKAGES += \
     wpa_supplicant.conf
 
 PRODUCT_PACKAGES += \
-    libsprout \
+    libmt6572 \
     libxlog
 	
 PRODUCT_PACKAGES += \
@@ -147,7 +146,7 @@ PRODUCT_PACKAGES += \
 # Power
 PRODUCT_PACKAGES += \
     power.default \
-    power.mt6582
+    power.mt6572
 
 # Dynamically set props
 #PRODUCT_SYSTEM_PROPERTY_BLACKLIST := \
@@ -159,7 +158,7 @@ PRODUCT_AAPT_CONFIG := normal hdpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi
 
 # call the proprietary setup
-$(call inherit-product, vendor/micromax/a106/a106-vendor.mk)
+$(call inherit-product, vendor/lenovo/a369i/a369i-vendor.mk)
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
@@ -181,7 +180,6 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES := \
 	dalvik.vm.image-dex2oat-Xms=64m \
 	dalvik.vm.image-dex2oat-Xmx=64m \
 	ro.dalvik.vm.native.bridge=0 \
-	ro.hardware=sprout \
 	ro.telephony.ril_class=MediaTekRIL
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
